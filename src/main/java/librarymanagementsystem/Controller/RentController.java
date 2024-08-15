@@ -26,9 +26,10 @@ public class RentController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteRent(@RequestParam UUID id) {
+    public void deleteRent(@PathVariable UUID id) {
         rentService.delete(id);
     }
+
 
 
 }

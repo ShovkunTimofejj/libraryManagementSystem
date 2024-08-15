@@ -1,8 +1,7 @@
 package librarymanagementsystem.Service;
 
 import librarymanagementsystem.Repository.UserRepository;
-import librarymanagementsystem.model.Book;
-import librarymanagementsystem.model.User;
+import librarymanagementsystem.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +14,10 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public List<User> findAll() {
+    public List<Users> findAll() {
         return userRepository.findAll();
     }
-    public User save(User user) {
+    public Users save(Users user) {
         return userRepository.save(user);
     }
     public void delete(UUID id) {

@@ -1,9 +1,8 @@
 package librarymanagementsystem.Controller;
 
 import librarymanagementsystem.Service.UserService;
-import librarymanagementsystem.model.User;
+import librarymanagementsystem.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,12 +16,12 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public List<User> getAllUsers() {
+    public List<Users> getAllUsers() {
         return userService.findAll();
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
+    public Users createUser(@RequestBody Users user) {
         return userService.save(user);
     }
 
